@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Horizontal");  //getting input from the input system so wasd and arrow keys work
         float vertical = Input.GetAxis("Vertical");
 
         m_Movement.Set(horizontal, 0f, vertical);
