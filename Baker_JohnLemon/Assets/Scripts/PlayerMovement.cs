@@ -25,8 +25,9 @@ public class PlayerMovement : MonoBehaviour
         m_Movement.Set(horizontal, 0f, vertical);  //setting the movement vector
         m_Movement.Normalize();  //using pythangorems theorem to normalize the vector so the character goes at an equal spped diagonally
 
-        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
+        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);  //these two lines determine if there is player input
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
+
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_Animator.SetBool("IsWalking", isWalking);
 
