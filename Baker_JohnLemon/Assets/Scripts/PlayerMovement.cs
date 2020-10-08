@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;  //the speed to turn
 
-    Animator m_Animator;
-    Rigidbody m_Rigidbody;
-    Vector3 m_Movement;
+    Animator m_Animator;   //the animator of John Lemon
+    Rigidbody m_Rigidbody; //the rigidbody of John lemon
+    Vector3 m_Movement;  //the movement saved as a vector3 from the input
     Quaternion m_Rotation = Quaternion.identity;
 
     void Start()
