@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;  //this line is is setting isWalking to true if there is input horizontally or vertically
         m_Animator.SetBool("IsWalking", isWalking);  //then this sets the isWalking parameter for the animation to true if the player is walking
 
-        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
-        m_Rotation = Quaternion.LookRotation(desiredForward);
+        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);  //setting the direction we want John lemon to face and slowing his turning down
+        m_Rotation = Quaternion.LookRotation(desiredForward);  //actually rotating john lemon
     }
 
     void OnAnimatorMove()
