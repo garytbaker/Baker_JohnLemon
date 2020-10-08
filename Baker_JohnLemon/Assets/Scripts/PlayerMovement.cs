@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float turnSpeed = 20f;
+    public float turnSpeed = 20f;  //the speed to turn
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        m_Animator = GetComponent<Animator>();
+        m_Animator = GetComponent<Animator>();   //setting the animator and the rigidbody to be manipulated in teh script
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
