@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");  //getting input from the input system so wasd and arrow keys work
         float vertical = Input.GetAxis("Vertical");
 
-        m_Movement.Set(horizontal, 0f, vertical);
-        m_Movement.Normalize();
+        m_Movement.Set(horizontal, 0f, vertical);  //setting the movement vector
+        m_Movement.Normalize();  //using pythangorems theorem to normalize the vector so the character goes at an equal spped diagonally
 
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
