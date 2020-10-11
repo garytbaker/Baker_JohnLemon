@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Animator = GetComponent<Animator>();   //setting the animator and the rigidbody to be manipulated in teh script
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_AudioSource = GetComponent<AudioSource>()//getting the reference for the audio for the footsteps
+        m_AudioSource = GetComponent<AudioSource>(); //getting the reference for the audio for the footsteps
     }
 
     void FixedUpdate()
