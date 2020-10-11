@@ -12,11 +12,11 @@ public class GameEnding : MonoBehaviour
     bool m_IsPlayerAtExit;  //the boolean that determines if the player is at the exit
     float m_Timer;          //the timer to see how long we are at the end of the level
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)  //this is to determine if the player has walked into the game ending box collider
     {
-        if (other.gameObject == player)
+        if (other.gameObject == player)  //if the it in fact the player
         {
-            m_IsPlayerAtExit = true;
+            m_IsPlayerAtExit = true;   //then they are at the exit
         }
     }
 
