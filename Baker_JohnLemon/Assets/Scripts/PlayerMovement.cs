@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     Animator m_Animator;   //the animator of John Lemon
     Rigidbody m_Rigidbody; //the rigidbody of John lemon
+    AudioSource m_AudioSource;  //the source for the footsteps
     Vector3 m_Movement;  //the movement saved as a vector3 from the input
     Quaternion m_Rotation = Quaternion.identity;  //setting rotation to the default
 
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Animator = GetComponent<Animator>();   //setting the animator and the rigidbody to be manipulated in teh script
         m_Rigidbody = GetComponent<Rigidbody>();
+        m_AudioSource = GetComponent<AudioSource>()//getting the reference for the audio for the footsteps
     }
 
     void FixedUpdate()
@@ -30,6 +32,18 @@ public class PlayerMovement : MonoBehaviour
 
         bool isWalking = hasHorizontalInput || hasVerticalInput;  //this line is is setting isWalking to true if there is input horizontally or vertically
         m_Animator.SetBool("IsWalking", isWalking);  //then this sets the isWalking parameter for the animation to true if the player is walking
+
+        if (isWalking) //if john lemon is walking
+        {
+            if (!m_AudioSource.isPlaying)  //and the footsteps are not playing
+            {
+                m_AudioSource.Play();  //play the sound
+            }
+        }
+        else  
+        {
+            m_AudioSource.Stop(); //if john lemon is not walking stop the footsteps sound
+        }
 
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);  //setting the direction we want John lemon to face and slowing his turning down
         m_Rotation = Quaternion.LookRotation(desiredForward);  //actually setting the rotation to what we want it to be
