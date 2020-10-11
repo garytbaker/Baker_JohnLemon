@@ -52,6 +52,13 @@ public class GameEnding : MonoBehaviour
     /// </summary>
     void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
+        if (!m_HasAudioPlayed)
+        {
+            audioSource.Play();
+            m_HasAudioPlayed = true;
+        }
+
+
         m_Timer += Time.deltaTime;  //iterates the time making a makeshift timer
 
         imageCanvasGroup.alpha = m_Timer / fadeDuration; //the fade value is the amount of time divided by the fade duration ranges from 0-1
