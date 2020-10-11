@@ -37,7 +37,7 @@ public class Observer : MonoBehaviour
             {
                 if (raycastHit.collider.transform == player)  //if the player is what was hit
                 {
-
+                    gameEnding.CaughtPlayer();//calls the caught player script
                 }
             }
         }
