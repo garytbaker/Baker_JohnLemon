@@ -29,6 +29,10 @@ public class GameEnding : MonoBehaviour
         {
             EndLevel();  //then we will end the level
         }
+        else if (m_IsPlayerCaught)
+        {
+            EndLevel();
+        }
     }
 
     /// <summary>
