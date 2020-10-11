@@ -20,11 +20,11 @@ public class GameEnding : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update()  //calling the update function
     {
-        if (m_IsPlayerAtExit)
+        if (m_IsPlayerAtExit)  //if the player is at teh end of the level
         {
-            EndLevel();
+            EndLevel();  //then we will end the level
         }
     }
 
