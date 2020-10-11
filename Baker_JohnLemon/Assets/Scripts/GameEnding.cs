@@ -8,8 +8,11 @@ public class GameEnding : MonoBehaviour
     public float displayImageDuration = 1f; // how long it will show the winning image
     public GameObject player;   //the player gameobjects reference
     public CanvasGroup exitBackgroundImageCanvasGroup;  //the canvas group for the fade to black and image
+    public CanvasGroup caughtBackgroundImageCanvasGroup; // canvas group dor when the player is caught
 
     bool m_IsPlayerAtExit;  //the boolean that determines if the player is at the exit
+    bool m_IsPlayerCaught;  //bool determining if the player is caught
+
     float m_Timer;          //the timer to see how long we are at the end of the level
 
     void OnTriggerEnter(Collider other)  //this is to determine if the player has walked into the game ending box collider
