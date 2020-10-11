@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class GameEnding : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float fadeDuration = 1f;  //the duration for how long the fade will happen
+    public float displayImageDuration = 1f; // how long it will show the winning image
+    public GameObject player;   //the player gameobjects reference
+    public CanvasGroup exitBackgroundImageCanvasGroup;  //the canvas group for the fade to black and image
+
+    bool m_IsPlayerAtExit;
+    float m_Timer;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject == player)
+        {
+            m_IsPlayerAtExit = true;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (m_IsPlayerAtExit)
+        {
+            EndLevel();
+        }
+    }
+
+    void EndLevel()
+    {
+        m_Timer += Time.deltaTime;
+
+        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+
+        if (m_Timer > fadeDuration + displayImageDuration)
+        {
+            Application.Quit();
+        }
     }
 }
