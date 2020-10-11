@@ -27,16 +27,17 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)  //if the player is at teh end of the level
         {
-            EndLevel();  //then we will end the level
+            EndLevel(exitBackgroundImageCanvasGroup);  //then we will end the level
         }
         else if (m_IsPlayerCaught)  //if the player is caught
         {
-            EndLevel();  //edn the level
+            EndLevel(caughtBackgroundImageCanvasGroup);  //edn the level
         }
     }
 
     /// <summary>
     /// this function actually ends the game
+    /// <paramref name="imageCanvasGroup"/>the canvas group is what you want to fade in
     /// </summary>
     void EndLevel(CanvasGroup imageCanvasGroup)  
     {
