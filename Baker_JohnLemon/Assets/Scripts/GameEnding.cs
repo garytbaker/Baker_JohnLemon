@@ -28,15 +28,18 @@ public class GameEnding : MonoBehaviour
         }
     }
 
-    void EndLevel()
+    /// <summary>
+    /// this function actually ends the game
+    /// </summary>
+    void EndLevel()  
     {
-        m_Timer += Time.deltaTime;
+        m_Timer += Time.deltaTime;  //iterates the time making a makeshift timer
 
-        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration; //the fade value is the amount of time divided by the fade duration ranges from 0-1
 
-        if (m_Timer > fadeDuration + displayImageDuration)
+        if (m_Timer > fadeDuration + displayImageDuration)  //if the timer is greater than the duration of the two fade timers
         {
-            Application.Quit();
+            Application.Quit();  //quit the game
         }
     }
 }
