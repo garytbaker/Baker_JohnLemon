@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnding : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class GameEnding : MonoBehaviour
         {
             m_IsPlayerAtExit = true;   //then they are at the exit
         }
+    }
+
+    public void CaughtPlayer()  //function to be called by another class
+    {
+        m_IsPlayerCaught = true;  //sets the caught to be true
     }
 
     void Update()  //calling the update function
@@ -49,7 +55,7 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
-
+                SceneManager.LoadScene(0);
             }
             else
             {
