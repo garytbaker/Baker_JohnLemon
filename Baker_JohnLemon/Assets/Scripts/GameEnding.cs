@@ -27,11 +27,11 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)  //if the player is at teh end of the level
         {
-            EndLevel(exitBackgroundImageCanvasGroup);  //then we will end the level
+            EndLevel(exitBackgroundImageCanvasGroup, false);  //then we will end the level
         }
         else if (m_IsPlayerCaught)  //if the player is caught
         {
-            EndLevel(caughtBackgroundImageCanvasGroup);  //edn the level
+            EndLevel(caughtBackgroundImageCanvasGroup, true);  //edn the level
         }
     }
 
@@ -39,7 +39,7 @@ public class GameEnding : MonoBehaviour
     /// this function actually ends the game
     /// <paramref name="imageCanvasGroup"/>the canvas group is what you want to fade in
     /// </summary>
-    void EndLevel(CanvasGroup imageCanvasGroup)  
+    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart)
     {
         m_Timer += Time.deltaTime;  //iterates the time making a makeshift timer
 
@@ -47,7 +47,16 @@ public class GameEnding : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)  //if the timer is greater than the duration of the two fade timers
         {
-            Application.Quit();  //quit the game
+            if (doRestart)
+            {
+
+            }
+            else
+            {
+                Application.Quit();  //quit the game
+            }
+
         }
+
     }
 }
