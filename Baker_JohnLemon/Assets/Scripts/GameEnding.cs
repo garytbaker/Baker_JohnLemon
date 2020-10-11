@@ -9,8 +9,8 @@ public class GameEnding : MonoBehaviour
     public GameObject player;   //the player gameobjects reference
     public CanvasGroup exitBackgroundImageCanvasGroup;  //the canvas group for the fade to black and image
 
-    bool m_IsPlayerAtExit;
-    float m_Timer;
+    bool m_IsPlayerAtExit;  //the boolean that determines if the player is at the exit
+    float m_Timer;          //the timer to see how long we are at the end of the level
 
     void OnTriggerEnter(Collider other)
     {
