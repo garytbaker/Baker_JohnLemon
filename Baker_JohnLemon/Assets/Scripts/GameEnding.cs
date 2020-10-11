@@ -29,20 +29,20 @@ public class GameEnding : MonoBehaviour
         {
             EndLevel();  //then we will end the level
         }
-        else if (m_IsPlayerCaught)
+        else if (m_IsPlayerCaught)  //if the player is caught
         {
-            EndLevel();
+            EndLevel();  //edn the level
         }
     }
 
     /// <summary>
     /// this function actually ends the game
     /// </summary>
-    void EndLevel()  
+    void EndLevel(CanvasGroup imageCanvasGroup)  
     {
         m_Timer += Time.deltaTime;  //iterates the time making a makeshift timer
 
-        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration; //the fade value is the amount of time divided by the fade duration ranges from 0-1
+        imageCanvasGroup.alpha = m_Timer / fadeDuration; //the fade value is the amount of time divided by the fade duration ranges from 0-1
 
         if (m_Timer > fadeDuration + displayImageDuration)  //if the timer is greater than the duration of the two fade timers
         {
