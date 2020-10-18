@@ -24,8 +24,9 @@ public class CubeDestAdder : MonoBehaviour
             {
                 levelcontrol.addPlatform();
             }*/
-            if (other.triggering.trigger == false)
+            if (other.gameObject.GetComponent<Triggering>().trigger == false)
             {
+                other.gameObject.GetComponent<Triggering>().trigger = true;
                 levelcontrol.addPlatform();
             }
        
