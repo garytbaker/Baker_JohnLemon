@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int numberOfPlatforms;
+    public int goalNumberOfPlatforms;
+ 
+
+    public void addPlatform()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

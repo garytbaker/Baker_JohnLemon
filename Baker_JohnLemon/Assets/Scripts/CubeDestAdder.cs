@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeDestAdder : MonoBehaviour
 {
     Vector2 PlatformXZ;
+    public GlobalVariables levelcontrol;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class CubeDestAdder : MonoBehaviour
             float distanceBetween = Vector2.Distance(PlatformXZ, GamePieceXZ);
             if (distanceBetween<2.0f)
             {
-
+                levelcontrol.addPlatform();
             }
        
         }
