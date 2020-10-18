@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CubeDestAdder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "GamePiece")
+        {
+            
+        }
     }
 }
