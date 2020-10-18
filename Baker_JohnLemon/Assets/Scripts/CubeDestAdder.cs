@@ -8,7 +8,7 @@ public class CubeDestAdder : MonoBehaviour
 
     private void Start()
     {
-        
+        PlatformXZ.Set(GetComponent<Transform>().position.x, GetComponent<Transform>().position.x); 
     }
     void Update()
     {
