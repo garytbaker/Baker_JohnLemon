@@ -10,16 +10,15 @@ public class CubeDestAdder : MonoBehaviour
     {
         PlatformXZ.Set(GetComponent<Transform>().position.x, GetComponent<Transform>().position.x); 
     }
-    void Update()
-    {
-        
-    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "GamePiece")
         {
-            Vector2 GamePieceXZ = new Vector2(other.transform.position.x, other.transform.position.y); 
+            Vector2 GamePieceXZ = new Vector2(other.transform.position.x, other.transform.position.y);
+            float distanceBetween = Vector2.Distance(PlatformXZ, GamePieceXZ);
+            
        
         }
     }
