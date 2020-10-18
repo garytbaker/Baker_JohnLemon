@@ -6,7 +6,7 @@ public class CubeDestAdder : MonoBehaviour
 {
     public GlobalVariables levelcontrol;
 
-    private void OnTriggerEnter(Collider other)  //when something triggers the level pad
+    private void OnTriggerStay(Collider other)  //when something triggers the level pad
     {
         if (other.tag == "GamePiece")  //if it is a game piece
         {
@@ -25,6 +25,8 @@ public class CubeDestAdder : MonoBehaviour
        
         }
     }
+
+   
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "GamePiece")  //if it is a game piece
