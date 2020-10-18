@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class CubeDestAdder : MonoBehaviour
 {
-    Vector2 PlatformXZ;
     public GlobalVariables levelcontrol;
 
-    private void Start()
+    private void OnTriggerEnter(Collider other)  //when something triggers the level pad
     {
-        PlatformXZ.Set(GetComponent<Transform>().position.x, GetComponent<Transform>().position.x); 
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "GamePiece")
+        if (other.tag == "GamePiece")  //if it is a game piece
         {
-            print("found it");
-           /* Vector2 GamePieceXZ = new Vector2(other.transform.position.x, other.transform.position.y);
+           
+           /* Vector2 GamePieceXZ = new Vector2(other.transform.position.x, other.transform.position.y);    This was a first attempt but the solution did not work. 
             float distanceBetween = Vector2.Distance(PlatformXZ, GamePieceXZ);
             if (distanceBetween<2.0f)
             {
                 levelcontrol.addPlatform();
             }*/
-            if (other.gameObject.GetComponent<Triggering>().trigger == false)
+            if (other.gameObject.GetComponent<Triggering>().trigger == false)  //if it is not triggereing another game pad
             {
-                other.gameObject.GetComponent<Triggering>().trigger = true;
-                levelcontrol.addPlatform();
+                other.gameObject.GetComponent<Triggering>().trigger = true; //it now is
+                levelcontrol.addPlatform();//add one to the total count to see if we should go to the next level
             }
        
         }
