@@ -1632,7 +1632,7 @@ GameObject:
   - component: {fileID: 1442993012}
   m_Layer: 0
   m_Name: Push Cube
-  m_TagString: Untagged
+  m_TagString: GamePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
