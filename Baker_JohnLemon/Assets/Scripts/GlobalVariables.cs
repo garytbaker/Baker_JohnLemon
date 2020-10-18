@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalVariables : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class GlobalVariables : MonoBehaviour
 
     public void addPlatform()
     {
-
+        numberOfPlatforms += 1;
+        if (numberOfPlatforms == goalNumberOfPlatforms)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 
