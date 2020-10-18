@@ -18,6 +18,10 @@ public class GlobalVariables : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+    public void deletePlatform()
+    {
+        numberOfPlatforms -= 1;
+    }
 
 
 }

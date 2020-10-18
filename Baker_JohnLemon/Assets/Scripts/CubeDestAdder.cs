@@ -25,4 +25,15 @@ public class CubeDestAdder : MonoBehaviour
        
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "GamePiece")  //if it is a game piece
+        {
+            if (other.gameObject.GetComponent<Triggering>().trigger == true)  //if it is triggereing a game pad
+            {
+                other.gameObject.GetComponent<Triggering>().trigger = false; //it not now
+                levelcontrol.deletePlatform();//delete one to the total count to see if we should go to the next level
+            }
+
+        }
 }
