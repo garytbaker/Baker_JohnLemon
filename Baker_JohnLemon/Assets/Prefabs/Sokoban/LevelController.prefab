@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5751160748505022022}
   - component: {fileID: 5751160748505022023}
+  - component: {fileID: 6179088413444851154}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -45,3 +46,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfPlatforms: 0
   goalNumberOfPlatforms: 2
+  spawnTimer: 60
+--- !u!114 &6179088413444851154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751160748505022017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8160b6a26f81a9440a40da2dd0c19a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 1
+  displayImageDuration: 1
+  player: {fileID: 0}
+  exitBackgroundImageCanvasGroup: {fileID: 0}
+  caughtBackgroundImageCanvasGroup: {fileID: 0}
+  exitAudio: {fileID: 0}
+  caughtAudio: {fileID: 0}
