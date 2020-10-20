@@ -9,7 +9,7 @@ public class GlobalVariables : MonoBehaviour
     public int numberOfPlatforms;
     public int goalNumberOfPlatforms;
     public GameObject ghost;
-
+    private bool spawned;
     public float spawnTimer = 60.0f;
 
     public void addPlatform()
@@ -28,8 +28,9 @@ public class GlobalVariables : MonoBehaviour
     public void Update()
     {
         spawnTimer -= Time.deltaTime;
-        if (spawnTimer == 0.0f)
+        if (spawnTimer <= 0.0f && spawned ==false)
         {
+            spawned = true;
             spawnGhost();
         }
     }
