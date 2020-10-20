@@ -45,16 +45,22 @@ public class GlobalVariables : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// this functions spawns in the ghost
+    /// </summary>
     public void spawnGhost()
     {
-        Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);
-        pointOfView = ghost.GetComponentInChildren<Observer>();
-        setGhostData();
+        Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);  //makes the new ghost
+        pointOfView = ghost.GetComponentInChildren<Observer>(); //sets opintOfView to the observer that controls resetting the level
+        setGhostData(); //then changes the data for the observer
     }
 
+    /// <summary>
+    /// This functions sets the data for the observer of the ghost so the level can restart
+    /// </summary>
     public void setGhostData()
     {
-        pointOfView.player = GameObject.FindGameObjectWithTag("Player").transform;
-        pointOfView.gameEnding = GetComponent<GameEnding>();
+        pointOfView.player = GameObject.FindGameObjectWithTag("Player").transform; //sets the player to the currenty player in Unity
+        pointOfView.gameEnding = GetComponent<GameEnding>();  //sets the gameEnding to the gameEnding of the level controller of the current level
     }
 }
