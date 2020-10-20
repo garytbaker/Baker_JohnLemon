@@ -8,7 +8,8 @@ public class GlobalVariables : MonoBehaviour
 
     public int numberOfPlatforms;
     public int goalNumberOfPlatforms;
- 
+
+    public float spawnTimer = 60.0f;
 
     public void addPlatform()
     {
@@ -23,5 +24,18 @@ public class GlobalVariables : MonoBehaviour
         numberOfPlatforms -= 1;
     }
 
+    public void Update()
+    {
+        spawnTimer -= Time.deltaTime;
+        if (spawnTimer == 0.0f)
+        {
+            spawnGhost();
+        }
+    }
+
+    public void spawnGhost()
+    {
+
+    }
 
 }
