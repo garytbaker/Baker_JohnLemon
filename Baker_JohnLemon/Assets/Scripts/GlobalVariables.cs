@@ -37,7 +37,10 @@ public class GlobalVariables : MonoBehaviour
 
     public void spawnGhost()
     {
-        Instantiate(ghost, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);
+        Observer PointOfView = ghost.GetComponentInChildren<Observer>();
+        PointOfView.player = GameObject.FindGameObjectWithTag("Player").transform;
+        PointOfView.gameEnding = GetComponent<GameEnding>();
     }
 
 }

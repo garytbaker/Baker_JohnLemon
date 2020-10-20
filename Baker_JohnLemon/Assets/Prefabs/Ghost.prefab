@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 5091583108386961063}
   - component: {fileID: 7290905115060289101}
   - component: {fileID: 52405101725091302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 5091583108386961063}
-  waypoints: []
+  player: {fileID: 0}
 --- !u!82 &52405101725091302
 AudioSource:
   m_ObjectHideFlags: 0
