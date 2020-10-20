@@ -8,6 +8,7 @@ public class GlobalVariables : MonoBehaviour
 
     public int numberOfPlatforms;
     public int goalNumberOfPlatforms;
+    public GameObject ghost;
 
     public float spawnTimer = 60.0f;
 
@@ -35,7 +36,7 @@ public class GlobalVariables : MonoBehaviour
 
     public void spawnGhost()
     {
-
+        Instantiate(ghost, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
 }
