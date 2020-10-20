@@ -11,7 +11,7 @@ public class GlobalVariables : MonoBehaviour
     public GameObject ghost;
     private bool spawned;
     public float spawnTimer = 60.0f;
-
+    public Observer pointOfView;
     public void addPlatform()
     {
         numberOfPlatforms += 1;
@@ -38,9 +38,13 @@ public class GlobalVariables : MonoBehaviour
     public void spawnGhost()
     {
         Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);
-        Observer PointOfView = ghost.GetComponentInChildren<Observer>();
-        PointOfView.player = GameObject.FindGameObjectWithTag("Player").transform;
-        PointOfView.gameEnding = GetComponent<GameEnding>();
+        pointOfView = ghost.GetComponentInChildren<Observer>();
+        setGhostData();
     }
 
+    public void setGhostData()
+    {
+        pointOfView.player = GameObject.FindGameObjectWithTag("Player").transform;
+        pointOfView.gameEnding = GetComponent<GameEnding>();
+    }
 }
