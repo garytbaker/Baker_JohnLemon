@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnAnimatorMove()  //this function is needed to move and rotate an animated character
     {
-        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);  //moving John lemon to the new position
+        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * 2*m_Animator.deltaPosition.magnitude);  //moving John lemon to the new position
         m_Rigidbody.MoveRotation(m_Rotation);  //rotating john lemon
     }
 }

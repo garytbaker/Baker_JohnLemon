@@ -50,9 +50,9 @@ public class GlobalVariables : MonoBehaviour
     /// </summary>
     public void spawnGhost()
     {
-        Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);  //makes the new ghost
-        ghost.layer = 9;//makes the new ghost on the ghost layer
-        pointOfView = ghost.GetComponentInChildren<Observer>(); //sets opintOfView to the observer that controls resetting the level
+        GameObject newGhost = Instantiate(ghost, new Vector3(4, 0, 4), Quaternion.identity);  //makes the new ghost
+        newGhost.layer = 9;//makes the new ghost on the ghost layer
+        pointOfView = newGhost.GetComponentInChildren<Observer>(); //sets opintOfView to the observer that controls resetting the level
         setGhostData(); //then changes the data for the observer
     }
 
