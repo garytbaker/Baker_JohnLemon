@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9031484793614523170}
   - component: {fileID: 9031484793614523174}
   - component: {fileID: 9031484793614523175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Push Cube
   m_TagString: GamePiece
   m_Icon: {fileID: 0}
