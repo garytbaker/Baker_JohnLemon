@@ -12,13 +12,12 @@ public class WaypointPatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");  //setting the destination to the first thing in the array of waypoints
+        player = GameObject.FindGameObjectWithTag("Player");  //setting the player top the current player in Unity
     }
 
     // Update is called once per frame
     void Update()
     {
-        //this iterates the index by one, but also makes it circle back by using modulus
-            navMeshAgent.SetDestination(player.transform.position); //sets the new destination
+            navMeshAgent.SetDestination(player.transform.position); //sets the new destination to the player every frame
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Triggering : MonoBehaviour
 {
-    public bool trigger = false;
+    public bool trigger = false;  //if the block is triggering another destpad already
 }
