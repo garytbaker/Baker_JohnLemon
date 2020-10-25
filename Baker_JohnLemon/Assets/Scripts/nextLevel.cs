@@ -9,19 +9,19 @@ public class nextLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelNumber = SceneManager.GetActiveScene().buildIndex;
-        if (levelNumber == 0)
+        levelNumber = SceneManager.GetActiveScene().buildIndex;  //gets the nuild index of the current leve
+        if (levelNumber == 0)  //if it is the home page
         {
-            levelNumber = 1;
+            levelNumber = 1;  //it is now the first level
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))  //when space is pressed
         {
-            SceneManager.LoadScene(levelNumber);
+            SceneManager.LoadScene(levelNumber);  //restart the level
         }
     }
 }
