@@ -53,14 +53,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameEnding.cs" />
+    <Compile Include="Assets\Scripts\Triggering.cs" />
+    <Compile Include="Assets\Scripts\GlobalVariables.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
     <Compile Include="Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\WaypointPatrol.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CubeDestAdder.cs" />
-    <Compile Include="Assets\Scripts\GlobalVariables.cs" />
-    <Compile Include="Assets\Scripts\Triggering.cs" />
+    <Compile Include="Assets\Scripts\nextLevel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3DBeginner_Third-PartyNotice.txt" />
