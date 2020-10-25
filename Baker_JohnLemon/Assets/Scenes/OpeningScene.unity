@@ -509,9 +509,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Help John Lemon steal some vital food supplies from the Ghost Mafia! Move
-    the crates to the designated spots to be carted away. Don't take too long, or
-    the ghosts will come after you. Press space to continue.
+  m_Text: "Help John Lemon steal some valuables from a haunted castle! Move the crates
+    to the designated spots to be carted away. Don't take too long, or the ghosts
+    will come after you. \n\nPress space to continue."
 --- !u!222 &1534161138
 CanvasRenderer:
   m_ObjectHideFlags: 0
