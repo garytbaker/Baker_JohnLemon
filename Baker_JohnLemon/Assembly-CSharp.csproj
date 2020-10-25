@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\nextLevel.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Crates And Barrels Pack Volume 1 - Free Version\manual.txt" />
      <None Include="Assets\3DBeginner_Third-PartyNotice.txt" />
      <None Include="Assets\Shaders\ToonShader.shader" />
      <None Include="Assets\Shaders\SpookyStandardShader.shader" />
