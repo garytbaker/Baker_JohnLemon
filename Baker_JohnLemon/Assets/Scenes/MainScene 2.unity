@@ -6403,7 +6403,7 @@ PrefabInstance:
     - target: {fileID: 5751160748505022023, guid: 9df8229504e45844d8d5329063a867f0,
         type: 3}
       propertyPath: spawnTimer
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5751160748505022023, guid: 9df8229504e45844d8d5329063a867f0,
         type: 3}
