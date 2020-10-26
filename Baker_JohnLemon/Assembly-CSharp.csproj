@@ -55,19 +55,20 @@
     <Compile Include="Assets\Scripts\GameEnding.cs" />
     <Compile Include="Assets\Scripts\Triggering.cs" />
     <Compile Include="Assets\Scripts\GlobalVariables.cs" />
+    <Compile Include="Assets\Scripts\nextLevel.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
     <Compile Include="Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\WaypointPatrol.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CubeDestAdder.cs" />
-    <Compile Include="Assets\Scripts\nextLevel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Crates And Barrels Pack Volume 1 - Free Version\manual.txt" />
      <None Include="Assets\3DBeginner_Third-PartyNotice.txt" />
      <None Include="Assets\Shaders\ToonShader.shader" />
      <None Include="Assets\Shaders\SpookyStandardShader.shader" />
+     <None Include="Assets\Fonts\readme.txt" />
      <None Include="Assets\Shaders\PlaneFog.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
